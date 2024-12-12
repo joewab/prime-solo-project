@@ -1,9 +1,7 @@
 CREATE TABLE IF NOT EXISTS "user" (
-	"id" serial NOT NULL,
-	"first_name" varchar(255) NOT NULL,
-	"last_name" varchar(255) NOT NULL,
-	"admin" boolean NOT NULL,
-	PRIMARY KEY ("id")
+    "id" SERIAL PRIMARY KEY,
+    "username" VARCHAR (80) UNIQUE NOT NULL,
+    "password" VARCHAR (1000) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS "image" (
